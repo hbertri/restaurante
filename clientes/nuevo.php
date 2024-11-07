@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'nombre' => $_POST['nombre'],
         'email' => $_POST['email'],
         'telefono' => $_POST['telefono'],
+        'direccion' => $_POST['direccion'], // Agregar la dirección aquí
     ];
     
     crearCliente($data);
@@ -19,5 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="text" name="nombre" placeholder="Nombre" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="text" name="telefono" placeholder="Teléfono" required>
+    <input type="text" name="direccion" placeholder="Dirección" required> <!-- Campo de dirección adicional -->
     <button type="submit">Agregar Cliente</button>
 </form>

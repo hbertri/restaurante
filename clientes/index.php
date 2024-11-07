@@ -8,7 +8,7 @@ $clientes = obtenerClientes();  // Obtener la lista de clientes
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes</title>
+    <title>Sabor y Servicio</title>
    
     <style>
         body {
@@ -71,7 +71,7 @@ $clientes = obtenerClientes();  // Obtener la lista de clientes
 
     <div class="container">
         <header>
-            <h1>Lista de Clientes</h1>
+            <h1>Sabor y Servicio</h1>
         </header>
 
         <main>
@@ -82,6 +82,7 @@ $clientes = obtenerClientes();  // Obtener la lista de clientes
                             <th>Nombre</th>
                             <th>Email</th>
                             <th>Teléfono</th>
+                            <th>Dirección</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -91,9 +92,11 @@ $clientes = obtenerClientes();  // Obtener la lista de clientes
                                 <td><?php echo htmlspecialchars($cliente->nombre); ?></td>
                                 <td><?php echo htmlspecialchars($cliente->email); ?></td>
                                 <td><?php echo htmlspecialchars($cliente->telefono); ?></td>
+                                <td><?php echo htmlspecialchars($cliente->direccion); ?></td>
                                 <td>
                                     <a href="editar.php?id=<?php echo $cliente->_id; ?>">Editar</a>
-                                    <button type="submit" name="eliminar" value="<?php echo $cliente->_id; ?>" onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');">Eliminar</button>
+                                    <a href="eliminar.php?id=<?php echo $cliente->_id; ?>" onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');">Eliminar</a>
+                                    
                                 </td>
                             </tr>
                         <?php endforeach; ?>

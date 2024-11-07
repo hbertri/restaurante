@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<h1>Agregar Nuevo Producto</h1>
+
 <form method="POST" action="">
     <input type="text" name="nombre" placeholder="Nombre" required>
     <input type="number" name="precio" placeholder="Precio" step="0.01" required>
